@@ -11,7 +11,8 @@ ____
 <big>Устройство проекта</big>  
 Проект написан на языке C++ с помощью библиотеки SFML.
 Вот стартовое меню:
-![](https://disk.yandex.ru/i/TWXYAhL96_ZyMw)
+<a href="https://disk.yandex.ru">
+<img src="i/TWXYAhL96_ZyMw" alt=""></a>
 
 <big>Как пользоваться программой</big>
 
