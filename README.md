@@ -1,3 +1,46 @@
+English:
+<big>Polynomials Project</big>  
+Tarmaev Alexander, 2021
+
+<big>Purpose of the project</big>  
+The main goal of this project is to create a calculator that helps perform basic arithmetic operations with polynomials, such as multiplication, addition, and differentiation.
+
+<big>Project structure</big>  
+The project is written in C++ using the SFML library. Here is the start menu:
+![](https://disk.yandex.ru/i/TWXYAhL96_ZyMw)  
+(MENU.PNG)
+
+<big>How to use the program</big>  
+1. Click on the "Enter Polynom" button, then enter a string in the format: {coefficient} {x} {^} {degree}. By default, the coefficient is 1, and the degree is 0 (if not entered, they become equal to the default value). The coefficient and degree are integers (can be negative).
+2. Press Enter, after which the polynomial will be displayed in the database (it will appear at the end of the list, and the database can be scrolled to access the desired polynomial).
+3. You can click on two polynomials from the database, then choose the operation to be performed with them. The new polynomial is also saved in the database. (For differentiation, only one polynomial is sufficient).
+
+<big>How is data stored?</big>  
+All monomials of a polynomial are stored in a struct called Polynom.
+
+struct Polynom {
+    int deg; // degree of the monomial
+    int coef; // coefficient of the monomial
+    Polynom* next; // pointer to the next monomial
+};
+
+The polynomials are stored in a struct called Polynom_database.
+
+struct Polynom_database {
+    int index; // polynomial number in the database
+    Polynom* pol; // pointer to the first monomial of the polynomial
+    Polynom_database* next; // pointer to the next polynomial
+};
+
+Thus, we use custom-written linked lists to store and process data.
+
+<big>What polynomial functions are implemented?</big>  
+Algebraic operations such as *addition*, *subtraction*, *multiplication*, and *differentiation* are implemented. Monomials with coefficients of 0 or multiple monomials with the same degree do not appear (**all like terms are combined**). Functions for *evaluating a polynomial at a point*, *solving reduced polynomials*, and *deleting polynomials from the database* are also written but not yet integrated into the application.
+
+<big>What have I learned?</big>  
+While working on this project, I learned to work with pointers, write singly linked lists and work with them, and also gained a more detailed understanding of the SFML library.
+
+Russian / Русский:
 <big>Проект Многочлены  
 Тармаев Александр, 2021
 </big>
@@ -63,5 +106,3 @@ struct Polynom_database {
 Во время работы с данным проектом я научился работать с
 указателями, писать односвязные списки и работать с ними, а
 также более подробно изучил библиотеку SFML.
-
-
